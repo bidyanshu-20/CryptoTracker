@@ -1,0 +1,82 @@
+.pricing-dashboard {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+  color: #222;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 300px;
+  outline: none;
+}
+
+/* Grid layout for cards */
+.coins-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Individual coin card */
+.coin-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.coin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.coin-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.coin-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.green {
+  color: #28a745;
+}
+
+.red {
+  color: #dc3545;
+}
+
+.watch-btn {
+  margin-top: 10px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.watch-btn.added {
+  background-color: #f0c040;
+}
+
+.watch-btn:hover {
+  opacity: 0.85;
+}

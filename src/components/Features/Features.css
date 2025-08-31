@@ -1,0 +1,84 @@
+.features-page {
+  padding: 50px;
+  text-align: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.features-page h1 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #f7931a, #ffcb05);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #f7931a, 0 0 10px #ffcb05; }
+  100% { text-shadow: 0 0 20px #f7931a, 0 0 40px #ffcb05; }
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 300px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-20px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: #f7931a;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: rotate(20deg) scale(1.2);
+  color: #ffcb05;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+.feature-link-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #f7931a, #ffcb05);
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.feature-link-btn:hover {
+  background: linear-gradient(45deg, #ffcb05, #f7931a);
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 203, 5, 0.5);
+}

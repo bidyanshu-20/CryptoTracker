@@ -1,0 +1,40 @@
+.blog-dashboard {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.blog-dashboard h1 {
+  color: #1f2937; /* dark gray */
+}
+
+input[type="text"],
+select {
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.articles {
+  margin-top: 1rem;
+}
+
+.article-card {
+  background-color: transparent;
+}
+
+.article-card:hover {
+  transform: scale(1.02);
+}
+
+.article-card img {
+  border-radius: 0.375rem;
+}
