@@ -38,3 +38,85 @@ select:focus {
 .article-card img {
   border-radius: 0.375rem;
 }
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+/* Large Tablets / Small Laptops */
+@media (max-width: 1024px) {
+  .blog-dashboard {
+    padding: 0 20px;
+  }
+
+  .blog-dashboard h1 {
+    font-size: 2rem;
+  }
+
+  .article-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .blog-dashboard h1 {
+    font-size: 1.8rem;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  input[type="text"],
+  select {
+    width: 100%;
+  }
+
+  .articles {
+    margin-top: 0.75rem;
+  }
+
+  .article-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 576px) {
+  .blog-dashboard {
+    padding: 0 15px;
+  }
+
+  .blog-dashboard h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .filters {
+    gap: 0.5rem;
+  }
+
+  .article-card {
+    transform: none; /* prevent over-zoom on small screens */
+  }
+
+  .article-card img {
+    border-radius: 0.3rem;
+  }
+}
+
+/* Small Mobile (≤ 400px) */
+@media (max-width: 400px) {
+  .blog-dashboard h1 {
+    font-size: 1.4rem;
+  }
+
+  input[type="text"],
+  select {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}

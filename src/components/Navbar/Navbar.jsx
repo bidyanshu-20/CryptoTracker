@@ -1,13 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
-import logo from "../../assets/logo.png";
-import icon from "../../assets/arrow_icon.png";
 import { Coincontext } from "../../context/coincontext.jsx";
-import { Link, NavLink, useNavigate } from "react-router-dom"; // <-- import useNavigate
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { setcurrency } = useContext(Coincontext);
-  const navigate = useNavigate(); // <-- initialize navigate
+  const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const currencyHandler = (event) => {
     switch (event.target.value) {
@@ -26,50 +25,55 @@ const Navbar = () => {
     }
   };
 
-  // Function to navigate to signup page
-  const handleSignUpClick = () => {
-    navigate("/signup");
-  };
-
   return (
     <div className="navbar">
-      <Link to={"/"}>
-        <img src={logo} alt="logo" />
+      <Link to={"/"} className="logo-text">
+        CryptoTracker
       </Link>
-      <ul>
+
+      {/* Hamburger Icon */}
+      <div
+        className={`hamburger ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      {/* Navigation Menu */}
+      <ul className={menuOpen ? "nav-menu open" : "nav-menu"}>
         <li>
-          <NavLink className="navstyle" to="/">
+          <NavLink to="/" onClick={() => setMenuOpen(false)}>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink className="navstyle" to="/coinsFeatures">
+          <NavLink to="/coinsFeatures" onClick={() => setMenuOpen(false)}>
             Features
           </NavLink>
         </li>
         <li>
-          <NavLink className="navstyle" to="/coinspricing">
+          <NavLink to="/coinspricing" onClick={() => setMenuOpen(false)}>
             Pricing
           </NavLink>
         </li>
         <li>
-          <NavLink className="navstyle" to="/coinsblog">
+          <NavLink to="/coinsblog" onClick={() => setMenuOpen(false)}>
             Blogs
           </NavLink>
         </li>
       </ul>
+
       <div className="nav-right">
         <select onChange={currencyHandler}>
           <option value="usd">USD</option>
           <option value="eur">EUR</option>
           <option value="inr">INR</option>
-          <option value="gbp">GBP</option>
-          <option value="jpy">JPY</option>
-          <option value="aud">AUD</option>
         </select>
-        <button onClick={handleSignUpClick}> 
-          Sign Up
-          <img src={icon} alt="img" />
+
+        <button onClick={() => navigate("/signup")}>
+          Sign Up →
         </button>
       </div>
     </div>

@@ -1,23 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fredoka:wght@300..700&family=Poppins&display=swap');
-*{
-  padding:0;
-  margin:0;
-  box-sizing: border-box;
-  font-family: "Exo 2", sans-serif;
-}
-
-a{
-  text-decoration: none;
-  color:inherit;
-}
-
-.app{
-  min-height: 100vh;
-  color:rgb(234, 220, 220);
-} */
 
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fredoka:wght@300..700&family=Poppins&display=swap');
-
+@import "tailwindcss";
 * {
   padding: 0;
   margin: 0;

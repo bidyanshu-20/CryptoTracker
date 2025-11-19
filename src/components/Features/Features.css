@@ -82,3 +82,94 @@
   transform: scale(1.1);
   box-shadow: 0 5px 15px rgba(255, 203, 5, 0.5);
 }
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+/* Large Tablets & Small Laptops */
+@media (max-width: 1024px) {
+  .features-page {
+    padding: 40px 30px;
+  }
+
+  .features-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .feature-card {
+    max-width: 350px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .features-page h1 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .features-grid {
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 25px 18px;
+    max-width: 320px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .feature-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 576px) {
+  .features-page {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .features-page h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature-card {
+    max-width: 100%;
+    padding: 20px 15px;
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+
+  .feature-link-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+  .features-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .feature-icon {
+    font-size: 2.2rem;
+  }
+}

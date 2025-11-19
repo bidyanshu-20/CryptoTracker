@@ -5,3 +5,42 @@
     border-top: 1px solid white;
     padding: 15px 0px;
 }
+/* ================================
+   RESPONSIVE FOOTER
+================================ */
+
+/* Large Tablets / Small Laptops */
+@media (max-width: 1024px) {
+  .footer {
+    max-width: 90%;
+    padding: 12px 0px;
+    font-size: 1rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .footer {
+    max-width: 95%;
+    padding: 12px 5px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 576px) {
+  .footer {
+    max-width: 100%;
+    padding: 10px 5px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+  .footer {
+    font-size: 0.85rem;
+    padding: 8px 4px;
+  }
+}
